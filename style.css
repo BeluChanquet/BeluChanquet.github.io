@@ -1,0 +1,104 @@
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-image: url(Skyscraper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header a {
+    color: black;
+}
+
+.header a:hover,
+.header a:active {
+    color: #c71c7a;
+}
+
+span {
+    color: #c71c7a;
+}
+
+.selfie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myphoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #c71c7a;
+    transition: transform 0.2s ease-in-out;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.educations {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#education {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.educations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.educations li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.educations li strong {
+    color: #000000;
+}
+
+.educations li:before {
+    content: "🎓";
+    margin-right: 10px;
+    color: #be4aa5;
+}
+
+.contacto {
+    width: 50%;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+form input[type="button"] {
+    display: inline-block;
+    background-color: #d40d71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="button"]:hover {
+    background-color: #720648;
+}
