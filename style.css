@@ -1,104 +1,221 @@
+:root {
+    --Misty-Rose: #F5E3E0;
+    --Orchid-Pink: #E8B4BC;
+    --Thulian-Pink: #D282A6;
+    --Eggplant: #6E4555;
+    --Jet: #3A3238;
+}
+
 * {
     font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     background-image: url(Skyscraper.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat; /* La imagen no se repite */
+    background-size: cover; /* La imagen cubre toda la ventana del navegador */
+    background-attachment: fixed; /* El fondo se queda fijo mientras se desplaza la pagina */
+    background-position: center; /* La imagen se centra */
+}
+
+.header {
+    position: fixed; /* Fija el header en la parte superior de la ventana incluiso desplazandose por la pagina */
+    width: 100%; /* El header ocupa todo el ancho de la ventana */
+    top: 0; /* Coloca el header en la parte superior */
+    background-color: var(--Eggplant); /* Color de fonde del header */
+    padding: 10px 0; /* Agrega espacio arriba y abajo del contenido del header */
+    z-index: 1000; /* Asegura que el header esté en la parte superior de otros elementos superpuestos */
+    display: flex; /* Utiliza Flexbox para organizar los elementos dentro del header */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del header */
+    backdrop-filter: blur(5px); /* Aplica un filtro de desenfoque al fondo detrás del header */
+    flex-wrap: wrap; /* Para permitir que el contenido se ajuste en pantallas más pequeñas */
 }
 
 .header a {
-    color: black;
+    color: var(--Thulian-Pink);
+    margin: 0 15px; /* Añade espacio a los lados de cada enlace */
+    text-transform: uppercase; /*Convierte el texto a mayúsculas */
+    font-weight: 700; /* Hace que el texto sea negrita */
+    transition: color 0.3s ease; /* Agrega una transición suave al cambiar el color */ 
 }
 
 .header a:hover,
-.header a:active {
-    color: #c71c7a;
+.header a:active { /* Cambia el color del enlace cuando se pasa el ratón por encima o cuando está activo */
+    color: var(--Orchid-Pink)
+}
+
+.about-me {
+    margin-top: 80px; /* Añade un espacio superior para evitar que el header cubra esta sección */
+    padding: 0 20px; /* Añade espacio lateral para que no quede pegado al borde */
 }
 
 span {
-    color: #c71c7a;
+    color: var(--Thulian-Pink)
 }
 
 .selfie {
-    display: flex;
+    display: flex; /* Usa Flexbox para centrar la imagen tanto horizontal como verticalmente */
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 #myphoto {
-    width: 200px;
+    width: 200px; /* Establece el tamaño de la imagen */
     height: 200px;
-    border-radius: 50%;
-    border: 5px solid #c71c7a;
-    transition: transform 0.2s ease-in-out;
-    animation: float 3s infinite ease-in-out;
+    border-radius: 50%; /* la hace circular con border-radius: 50% */
+    border: 5px solid var(--Eggplant); /* le agrega un borde */
+    transition: transform 0.2s ease-in-out; /* define una transición para la transformación */
+    animation: float 3s infinite ease-in-out; /* añade una animación float que hace que la imagen se mueva ligeramente arriba y abajo */
 }
 
-@keyframes float {
+@keyframes float { /* @keyframes: Define una animación llamada float */
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0); /* 0%, 100%: Al inicio y al final de la animación, la imagen estará en su posición original */
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-10px); /* 50%: A la mitad de la animación, la imagen se moverá 10 píxeles hacia arriba */
     }
 }
 
 .educations {
-    width: 50%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    width: 50%; /* Define que la sección ocupe el 50% del ancho de la págin */
+    margin: 50px auto; /* Centra la sección horizontalmente y añade un margen superior e inferior */
+    padding: 20px; /* Añade espacio interior a la sección */
+    background-color: #fff; /*  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave alrededor de la sección */
+    border-radius: 8px; /* Redondea ligeramente las esquinas */
 }
 
 #education {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #000000;
-    text-align: center;
+    font-size: 22px; /* Establece el tamaño del texto */
+    margin-bottom: 20px; /* Añade un espacio debajo del encabezado */
+    color: #000000; /* Establece el color del texto. */
+    text-align: center; /* Centra el texto */
 }
 
 .educations ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Elimina el estilo de lista por defecto y el padding */
+    padding: 0; /*  */
 }
 
 .educations li {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 10px 0; /* Añade un margen a cada elemento de la lista */
+    font-size: 18px; /* define el tamaño del texto */
 }
 
-.educations li strong {
+.educations li strong { /* Aplica un color al texto en negrita */
     color: #000000;
 }
 
 .educations li:before {
-    content: "🎓";
-    margin-right: 10px;
-    color: #be4aa5;
+    content: "🎓"; /* Inserta un icono de diploma 🎓 antes de cada elemento de la lista */
 }
 
 .contacto {
-    width: 50%;
-    margin: 40px auto;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 8px;
+    font-size: 16px; /* Establece el tamaño del texto */
+    width: 20%; /* Define que la sección ocupe el 50% del ancho de la página */
+    margin: 30px auto; /* Centra la sección horizontalmente y añade un margen superior e inferior */
+    padding: 10px; /* Añade espacio interior */
+    background-color: #ffffff; /* Aplica un fondo blanco */
+    border-radius: 8px; /* Redondea ligeramente las esquinas */
 }
 
-form input[type="button"] {
-    display: inline-block;
-    background-color: #d40d71;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#contact {
+    text-align: center
 }
 
-form input[type="button"]:hover {
-    background-color: #720648;
+form input[type="button"] { /* Estiliza los botones del formulario */
+    display: inline-block; /*  */
+    background-color: var(--Jet); /* Define el color de fondo del botón */
+    color: white; /* Define el color del texto en blanco */
+    padding: 10px 20px; /* Añade espacio interior en los botones */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 50px; /*  Redondea los bordes del botón para que sea ovalado */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Define una transición suave para los cambios de color y escala */
+}
+
+form input[type="button"]:hover { /* Cambia el color de fondo y escala el botón cuando el ratón se coloca sobre é */
+    background-color: var(--Thulian-Pink);
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: var(--Jet);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    margin: 20px 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: var(--Thulian-Pink);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--Thulian-Pink);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    #myphoto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .educations {
+        width: 50%;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 10px;
+    }
 }
