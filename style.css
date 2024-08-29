@@ -9,6 +9,7 @@
 * {
     font-family: "Raleway", sans-serif;
     box-sizing: border-box;
+    padding: 0;
 }
 
 body {
@@ -79,65 +80,128 @@ span {
     }
 }
 
+.education-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--Light-Gray);
+}
+
 .educations {
-    width: 50%; /* Define que la sección ocupe el 50% del ancho de la págin */
-    margin: 50px auto; /* Centra la sección horizontalmente y añade un margen superior e inferior */
-    padding: 20px; /* Añade espacio interior a la sección */
-    background-color: #fff; /*  */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave alrededor de la sección */
-    border-radius: 8px; /* Redondea ligeramente las esquinas */
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
 #education {
-    font-size: 22px; /* Establece el tamaño del texto */
-    margin-bottom: 20px; /* Añade un espacio debajo del encabezado */
-    color: #000000; /* Establece el color del texto. */
-    text-align: center; /* Centra el texto */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--Eggplant);
+    text-align: center;
 }
 
-.educations ul {
-    list-style-type: none; /* Elimina el estilo de lista por defecto y el padding */
-    padding: 0; /*  */
+.education-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.educations li {
-    margin: 10px 0; /* Añade un margen a cada elemento de la lista */
-    font-size: 18px; /* define el tamaño del texto */
+.education-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--Misty-Rose);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.educations li strong { /* Aplica un color al texto en negrita */
-    color: #000000;
+.education-item:hover {
+    background-color: var(--Orchid-Pink);
 }
 
-.educations li:before {
-    content: "🎓"; /* Inserta un icono de diploma 🎓 antes de cada elemento de la lista */
+.icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.educations li strong {
+    color: var(--Jet);
+}
+
+.education-item span {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--Light-Gray);
 }
 
 .contacto {
-    font-size: 16px; /* Establece el tamaño del texto */
-    width: 20%; /* Define que la sección ocupe el 50% del ancho de la página */
-    margin: 30px auto; /* Centra la sección horizontalmente y añade un margen superior e inferior */
-    padding: 10px; /* Añade espacio interior */
-    background-color: #ffffff; /* Aplica un fondo blanco */
-    border-radius: 8px; /* Redondea ligeramente las esquinas */
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact {
-    text-align: center
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--Eggplant);
 }
 
-form input[type="button"] { /* Estiliza los botones del formulario */
-    display: inline-block; /*  */
-    background-color: var(--Jet); /* Define el color de fondo del botón */
-    color: white; /* Define el color del texto en blanco */
-    padding: 10px 20px; /* Añade espacio interior en los botones */
-    border: none; /* Elimina el borde del botón */
-    border-radius: 50px; /*  Redondea los bordes del botón para que sea ovalado */
-    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Define una transición suave para los cambios de color y escala */
+.contact-form h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--Jet);
 }
 
-form input[type="button"]:hover { /* Cambia el color de fondo y escala el botón cuando el ratón se coloca sobre é */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--Orchid-Pink);
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--Thulian-Pink);
+}
+
+.contact-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: var(--Jet);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact-form input[type="submit"]:hover {
     background-color: var(--Thulian-Pink);
     transform: scale(1.05);
 }

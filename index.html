@@ -39,32 +39,77 @@
         </div>
     </div>
 
-    <div>
+    <div class="education-container">
         <div class="educations">
             <h2 id="education">Education</h2>
-            <ul>
-                <li><strong>U.T.U. La Blanqueada - </strong>Auxiliar Administrativo Contable Calificado</li>
-                <li><strong>U.T.U. La Blanqueada - </strong>Asistente de Dirección</li>
-                <li><strong>Instituto BIOS - </strong>Analista en Gestión Inmobiliaria</li>
-                <li><strong>Escuela Aquelarre - </strong>Fotografía Integral</li>
-                <li><strong>Foto Club Uruguayo - </strong>Fotografía de Arquitectura</li>
-                <li><strong>Escuela Carne - </strong>Foto de Moda</li>
-                <li><strong>Dickens Institute - </strong>First Certificate in English</li>
+            <ul class="education-list">
+                <li>
+                    <div class="education-item">
+                        <span class="icon">🎓</span>
+                        <span><strong>U.T.U. La Blanqueada - </strong>Auxiliar Administrativo Contable Calificado</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="icon">🎓</span>
+                        <span><strong>U.T.U. La Blanqueada - </strong>Asistente de Dirección</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="icon">🎓</span>
+                        <span><strong>Instituto BIOS - </strong>Analista en Gestión Inmobiliaria</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="icon">📷</span>
+                        <span><strong>Escuela Aquelarre - </strong>Fotografía Integral</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="icon">🏛️</span>
+                        <span><strong>Foto Club Uruguayo - </strong>Fotografía de Arquitectura</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="icon">👗</span>
+                        <span><strong>Escuela Carne - </strong>Foto de Moda</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <span class="icon">📜</span>
+                        <span><strong>Dickens Institute - </strong>First Certificate in English</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div>
+    <div class="contact-container">
         <div class="contacto">
-            <h2 id="contact">Contact</h2>
-            <form>
+            <h2 id="contact">CONTACT</h2>
+            <form class="contact-form">
                 <h4>Let's keep in touch!</h4>
-                <p>First Name: <input type="text" name="fname" required></p>
-                <p>Last Name: <input type="text" name="lsurname" required></p>
-                <p>Email: <input type="email" name="mail" required></p>
-                <p>Phone: <input type="number" name="phone" required></p>
-                <p>Message: <input type="text" name="message" required></p>
-                <input type="button" value="Send">            
+                <div class="form-group">
+                    <input type="text" name="fname" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lsurname" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="mail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <input type="submit" value="Send">
             </form>
         </div>
     </div>
